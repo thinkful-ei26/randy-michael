@@ -1,3 +1,10 @@
+'use strict';
+const store =[
+        {name:"lime",checked:false},
+        {name:"banana",checked:false},
+        {name:"apples",checked:false}
+];
+
 function renderShoppingList(){
 
     //render DOM
@@ -31,8 +38,13 @@ function handleDeleteitemClicked() {
 //controller function run all other functions
 function handleShoppingList(){
 
-
+handleDeleteitemClicked();
+handleItemCheckClicked();
+handleNewItemSubmit();
+renderShoppingList();
 
 }
+
+$(handleShoppingList);
 
 
